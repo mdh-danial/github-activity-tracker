@@ -21,3 +21,7 @@
     4. convert response from JSON to python dictionary 
 
 4. error messages starting with 4xx usually is client error while error messages starting with 5xx usually is server error
+
+5. json.dumps helps to make data more readable with line breaks, indentation and proper formatting
+
+6. Github public /events endpoint only shows event. You must specifically call the dictionary key you are looking for within each event to see for example, commits.
