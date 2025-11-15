@@ -20,5 +20,5 @@ if response.status_code == 200:
     data = response.json()
     print("Data received", data)
 
-else:
-    print("ERROR: ", response.status_code)
+elif response.status_code == 404:
+    print("username not found, ERROR:  ", response.status_code)
