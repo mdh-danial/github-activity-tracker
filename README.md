@@ -17,5 +17,7 @@
         - status code 304 = not modified
         - status code 403 = Forbidden
         - status code 503 = service unavailable
-        
+
     4. convert response from JSON to python dictionary 
+
+4. error messages starting with 4xx usually is client error while error messages starting with 5xx usually is server error
