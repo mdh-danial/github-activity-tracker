@@ -1,5 +1,6 @@
 import requests
 import sys
+import json
 
 # obtain username from cli
 if len(sys.argv) < 2:
@@ -17,7 +18,7 @@ response = requests.get(url)
 # check response status code
 if response.status_code == 200:
     data = response.json()
-    print("Data received:", data)
+    print("Data received:", json.dumps(data, indent=4))
 
 elif 400 <= response.status_code < 500:
     print(f"Client error ({response.status_code}): {response.text}")
