@@ -7,3 +7,7 @@ if len(sys.argv) < 2:
 else:
     username = sys.argv[1] 
 
+# 1. Define API endpoint (URL)
+# Example: https://api.github.com/users/<user>/events
+url = f"https://api.github.com/users/{username}/events"
+
