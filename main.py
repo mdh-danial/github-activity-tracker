@@ -11,3 +11,14 @@ else:
 # Example: https://api.github.com/users/<user>/events
 url = f"https://api.github.com/users/{username}/events"
 
+# 2. Send a GET request to the API
+response = requests.get(url)
+
+# 3. Check for successful request (status code 200)
+if response.status_code == 200:
+    # 4. convert response frpm JSON to Python dict
+    data = response.json()
+    print("Data received", data)
+
+else:
+    print("ERROR: ", response.status_code)
