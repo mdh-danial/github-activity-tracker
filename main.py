@@ -10,7 +10,7 @@ else:
 
 # 1. Define API endpoint (URL)
 # Example: https://api.github.com/users/<user>/events
-url = f"https://api.github.com/users/{username}/events"
+url = f"https://api.github.com/users/{username}/events/public"
 
 # 2. Send a GET request to the API
 response = requests.get(url)
@@ -18,7 +18,14 @@ response = requests.get(url)
 # check response status code
 if response.status_code == 200:
     data = response.json()
-    print("Data received:", json.dumps(data, indent=4))
+    recent_activites = data[:5]
+
+    for i, activity in enumerate(recent_activites, start=1):
+        print(f"--- Activity {i} ---")
+        print("Type:", activity["type"])
+        print("Repo:", activity["repo"]["name"])
+        print("Date:", activity["created_at"])
+        print("-" * 40)
 
 elif 400 <= response.status_code < 500:
     print(f"Client error ({response.status_code}): {response.text}")
