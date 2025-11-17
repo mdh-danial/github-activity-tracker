@@ -1,6 +1,8 @@
 # Github Activity Tracker
-
+#### Project URL: https://roadmap.sh/projects/github-user-activity
 ## Description
+A CLI project that tracks recent activity of a github user. Must include username in command line.
+
 
 ## Usage
 ```bash
