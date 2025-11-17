@@ -3,6 +3,11 @@
 ## Description
 
 ## Usage
+```bash
+git clone https://github.com/mdh-danial/github-activity-tracker.git
+cd activity_tracker
+python main.py <github username>
+```
 
 ## Learning points
 1. I learnt that REST API is a way for a client(me) to request data over the internet by sending a http request to a server and receiving requested data in the form of JSON 
